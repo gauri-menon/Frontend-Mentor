@@ -1,0 +1,491 @@
+html {
+    box-sizing: border-box;
+    height:100vh;
+}
+
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+
+body {
+    max-width: 1820px;
+    margin: auto;
+    background-color: rgb(234, 239, 248);
+    font-family: 'Public Sans', sans-serif;
+    font-size: 15px;
+}
+
+p {
+    color: #6C8294;
+}
+
+/* Header-Container */
+.wrapper{
+    /* margin:40px; */
+    padding:40px;
+    /* margin: auto; */
+}
+
+/* NavBar */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Header-Items*/
+hr {
+    display: none;
+}
+
+.navbar {
+    flex-grow: 1;
+    /* flex-basis: 600px; */
+    flex-grow:2;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    /* flex-wrap: wrap; */
+}
+
+.flex-nav {
+    /* flex-grow: 1; */
+    margin: 0 5%;
+    /* align-self: flex-start; */
+    flex-basis: 500px;
+}
+
+/* Navbar-Container */
+.flex-nav ul{
+    flex-grow: 1;
+    list-style: none;
+    padding:0;
+    margin:0;
+    /* margin-top: 15px; */
+    display:flex;
+    justify-content: space-around;
+    /* flex-wrap: wrap; */
+}
+
+/* Navbar-Item */
+.flex-nav ul li a:link {
+    text-decoration: none;
+    color: rgb(108,130,148);
+    font-weight: 600;
+    transition: 0.1s;
+
+}
+
+.flex-nav ul li a:visited{
+    color: rgb(108,130,148);
+}
+
+.flex-nav ul li a:hover {
+    color: #36536b;
+}
+
+/* Schedule button */
+.schedule {
+    /* float:right; */
+    background-color: rgb(186,66,112);
+    color: rgb(251,252,254);
+    border:none;
+    height: 48px;
+    width: 173px;
+    border-radius: 40px;
+    font-weight: bold;
+    transition: 0.1s;
+}
+
+.schedule:hover {
+    background-color: #da6d97;
+}
+
+.menu{
+    display:none;
+}
+
+
+
+
+/* index.html */
+/* Main */
+
+.first-page {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.first-page span p{
+    margin-left: 30px;
+}
+
+.start{
+    font-size: 72px;
+}
+
+h1 {
+    /* font-size: 72px; */
+    font-size: 48px;
+    font-family: 'DM Serif Display', serif;
+    width: 550px;
+    /* flex-basis: 550px; */
+    color: #36536B;
+    font-weight: 500;
+}
+
+/* Email box */
+.details {
+    display:flex;
+    width: 445px;
+    background-color: #fbfcfb;
+    border-radius: 40px;
+    flex-wrap: wrap;
+}
+
+.details input {
+    flex-grow:1;
+    border:none;
+    border-radius: 40px;
+    padding-left:30px;
+}
+
+.details input::placeholder {
+    color: #36536B;
+}
+
+/* Mid page footer */
+.first-page-footer {
+    padding: 40px;
+    background-color: #1b262f;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.first-page-footer h1{
+    /* font-size: 48px; */
+    color: #fbfcfb;
+    display: inline;
+}
+
+.first-page-footer p {
+    color: #fbfcfb;
+}
+
+.info {
+    width: 445px;
+}
+
+.about-us {
+    background-color: rgba(251,252,254,0);
+    height: 48px;
+    width: 129px;
+    border: 1px solid #fbfcfb;
+    border-radius: 40px;
+    color: #fbfcfb;
+}
+
+.partners picture {
+    display: flex;
+    flex-wrap: wrap;
+    width: 536px;
+    flex:1;
+    justify-content: space-between;
+}
+
+.partners picture img {
+    margin: 20px;
+    width: 110px;
+    filter: invert(100%) sepia(25%) saturate(2%) hue-rotate(166deg) brightness(104%) contrast(100%);
+}
+
+/* After first footer */
+
+.implement div{
+    /* flex-wrap: wrap; */
+    /* justify-content: space-between; */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.implement div span {
+    width: 445px;
+}
+
+.implement div span h1 {
+    margin-top: 0;
+    display: inline;
+}
+
+.implement picture img{
+    width: 566px;
+}
+
+/* Finances */
+.finances {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    flex-shrink: 1;
+}
+
+.finances span {
+    width: 350px;
+}
+
+.finances span p {
+    line-height: 25px;
+}
+
+.heading {
+    color:#36536B
+}
+
+
+/* Ready to start section */
+.ready {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ready span{
+    height: 48px;
+}
+
+/* Tablet view */
+@media(max-width:1155px){
+    /* index.html */
+    /* Main */
+    h1, .start {
+        width: 573;
+        font-size: 48px;
+        text-align: center;
+    }
+
+    .first-page{
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .first-page span p {
+        /* margin: auto;
+        display:inline; */
+        text-align: center;
+    }
+
+    .first-page picture{
+        order:-1;
+        
+    }
+
+    .first-page picture img {
+        height: 460px;
+        width: auto;
+    }
+
+    .first-page span {
+        margin: auto;
+    }
+
+    .first-page-footer {
+        text-align: center;
+    }
+
+    .info {
+        margin-top:20px;
+        order: 1;
+    }
+
+
+    /* After first footer */
+    .implement div span {
+        width: 580px;
+        text-align: center;
+    }
+
+    .implement div {
+        flex-direction: column;
+    }
+
+    .implement div picture {
+        order: -1;
+    }
+
+    /* Finances */
+    .finances {
+        margin-top: 60px;
+    }
+
+    /* Ready to start section */
+    .ready {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+
+}
+
+/* Mobile view */
+
+@media(max-width:640px){
+    .wrapper {
+        padding: 10px;
+    }
+
+    .menu{
+        display: flex;
+        width:30px;
+        height:17px;
+        flex-grow:1;
+        align-self: center;
+        justify-content: flex-end;
+    }
+
+    hr {
+        margin:0;
+        align-self: flex-end;
+        width:60%;
+    }
+
+    header {
+        align-items: flex-start;
+        /* z-index: 1;
+        position: relative; */
+    }
+
+    .menu-close {
+        display:none;
+        z-index: 2;
+        position: fixed;
+    }
+
+    picture {
+        z-index: 1;
+        position: relative;
+    }
+
+    .navbar {
+        
+        flex-direction: column;
+        justify-content:flex-end;
+        /* column-gap: 20px; */
+        background-color: rgba(27,38,47,0.9);
+        /* align-content: stretch; */
+        flex:1 1 75%;
+        height:100vh;
+
+        display:none;
+        /* z-index:1;
+        position:relative; */
+    }
+    
+    .navbar span {
+        flex:1;
+    } 
+
+    .flex-nav {
+        flex:1;
+        flex-grow:1;
+    }
+    
+    .flex-nav ul{
+        justify-content: center;
+        flex-direction: column;
+        /* flex:1 1 75%; */
+        flex-wrap: wrap;
+        align-items: center;
+        height:100%;
+        /* flex-grow:1; */
+    }
+    
+    .flex-nav ul li {
+        /* text-align: center; */
+        /* align-items:center; */
+        flex-grow:1;
+    }
+
+    .flex-nav ul li a:link{
+        color:#6C8294;
+    }
+
+    .flex-nav ul li a:visited{
+        color:#6C8294;
+    }
+
+
+
+
+    /* index.html */
+    /* Main */
+    .first-page h1{
+        width: 327px;
+        text-align: center;
+        margin: auto;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    .start {
+        font-size: 32px;
+    }
+
+    .first-page span {
+        width: 320px;
+    }
+
+    .first-page picture img{
+        height: 400px;
+        width: auto;
+    }
+
+    .details {
+        background-color: rgba(251,252,254,0);
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .details> .schedule, .details .email {
+        height: 48px;
+        /* width: 80%; */
+        width: 327px;
+        margin-top: 15px;
+    }
+
+    .partners> picture {
+        width: 280px;
+    }
+
+    .partners picture img {
+        width: 100px;
+    }
+
+    .info {
+        width: 327px;   
+    }
+
+
+    /* After first footer */
+    .implement div span {
+        width: 322px;
+    }
+
+    .implement div picture img {
+        width: 400px;
+    }
+    
+    /* Finances */
+    .finances {
+        flex-direction: column;
+        align-items: center;
+    }
+}
