@@ -1,15 +1,20 @@
+/* Common styles */
+
 html {
     box-sizing: border-box;
-    height:100vh;
+    height:100%;
+    width: 100%;
 }
 
 *, *:before, *:after{
     box-sizing: inherit;
 }
 
+.wrapper {
+    margin-top: 40px;
+}
+
 body {
-    max-width: 1820px;
-    margin: auto;
     background-color: rgb(234, 239, 248);
     font-family: 'Public Sans', sans-serif;
     font-size: 15px;
@@ -19,16 +24,27 @@ p {
     color: #6C8294;
 }
 
-/* Header-Container */
-.wrapper{
-    /* margin:40px; */
-    padding:40px;
-    /* margin: auto; */
+h1 {
+    font-size: 48px;
+    font-family: 'DM Serif Display', serif;
+    width: 550px;
+    color: #36536B;
+    font-weight: 500;
 }
+
+h2 {
+    color:#BA4270;
+    font-size: 32px;
+    font-family: 'DM Serif Display', serif;
+}
+
+/* Header-Container */
+
 
 /* NavBar */
 header {
     display: flex;
+    margin: 0 100px;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
@@ -112,6 +128,11 @@ hr {
 /* index.html */
 /* Main */
 
+main section {
+    margin-top:30px;
+    padding: 0 100px;
+} 
+
 .first-page {
     display: flex;
     flex-wrap: wrap;
@@ -125,16 +146,6 @@ hr {
 
 .start{
     font-size: 72px;
-}
-
-h1 {
-    /* font-size: 72px; */
-    font-size: 48px;
-    font-family: 'DM Serif Display', serif;
-    width: 550px;
-    /* flex-basis: 550px; */
-    color: #36536B;
-    font-weight: 500;
 }
 
 /* Email box */
@@ -151,19 +162,25 @@ h1 {
     border:none;
     border-radius: 40px;
     padding-left:30px;
+    font-weight: bold;
 }
 
 .details input::placeholder {
     color: #36536B;
 }
 
-/* Mid page footer */
+.details input:hover{
+    color:#1b262f;
+}
+
+/* Mid-page footer */
 .first-page-footer {
-    padding: 40px;
+    /* padding: 40px; */
+    padding: 40px 100px;
     background-color: #1b262f;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -188,6 +205,12 @@ h1 {
     border: 1px solid #fbfcfb;
     border-radius: 40px;
     color: #fbfcfb;
+    transition: 0.1s;
+}
+
+.about-us:active{
+    color: #1b262f;
+    background-color:#fbfcfb;
 }
 
 .partners picture {
@@ -204,7 +227,7 @@ h1 {
     filter: invert(100%) sepia(25%) saturate(2%) hue-rotate(166deg) brightness(104%) contrast(100%);
 }
 
-/* After first footer */
+/* After mid-page footer */
 
 .implement div{
     /* flex-wrap: wrap; */
@@ -254,20 +277,145 @@ h1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom:30px;
 }
 
 .ready span{
     height: 48px;
 }
 
+
+/* Footer */
+footer {
+    background: #1b262f;
+    padding: 0 100px;
+    /* height: 100px; */
+}
+
+footer div {
+    display: flex;
+    height:100px;
+    align-items: center;
+}
+
+.flex-nav.footer {
+    text-align: center;
+    flex-direction: row;
+    flex-shrink:1;
+}
+
+.footer-navbar {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-navbar span {
+    width: 120px;
+}
+
+.footer-navbar span picture{
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex-nav.footer ul li a:hover{
+    color: #fbfcfb;
+}
+
+.footer-navbar span picture img:hover {
+    filter: invert(72%) sepia(17%) saturate(5114%) hue-rotate(296deg) brightness(100%) contrast(95%);
+    /* color:#da6d97 */
+}
+
+/* pricing.html */
+
+.plan-list{
+    display:flex;
+    justify-content: space-between;
+}
+
+.plan{
+    width: 350px;
+    flex-shrink:1;
+    margin: 10px;
+}
+
+.pricing h1 {
+    margin:0;
+    width: 120px;
+    /* display: inline; */
+}
+
+.plan hr {
+    width: 90%;
+    display: block;
+    margin:0;
+    /* background-color: black;
+    border:solid; */
+}
+
+.no-check {
+    /* height:47px; */
+    padding:15px;
+    margin-left:15px;
+    color: #6c8294;
+}
+
+
+.plan span div {
+    height: 47px;
+}
+
+.plan span picture p{
+    color: #36536B;
+    display: inline;
+}
+
+.plan button{
+    width: 168px;
+    height:48px;
+    background-color: rgba(251,251,251,0);
+    border-color:#36536B;
+    color:#36536B;
+    border-radius: 30px;
+    transition: 0.1s;
+}
+
+.plan button:hover {
+    background-color: #36536B;
+    color: #fbfcfb
+}
+
+
+.plan ul {
+    list-style-type: none;
+    color: #36536B;
+}
+
+.plan ul li {
+    padding: 15px;
+}
+
+
 /* Tablet view */
 @media(max-width:1155px){
     /* index.html */
+    /* Navbar */
+    header{
+        margin: 0 40px;
+    }
+
     /* Main */
+    main section{
+        padding: 0 40px;
+    }
+
     h1, .start {
         width: 573;
         font-size: 48px;
         text-align: center;
+        margin: auto;
     }
 
     .first-page{
@@ -297,6 +445,7 @@ h1 {
 
     .first-page-footer {
         text-align: center;
+        justify-content: center;
     }
 
     .info {
@@ -330,16 +479,45 @@ h1 {
         text-align: center;
     }
     
+    footer {
+        padding: 0 40px;
+    }
 
+
+    /* pricing.html */
+    .pricing h1 {
+        margin: auto;
+        font-size: 32px;
+    }
+
+    .plan h2 {
+        font-size: 24px;
+        font-weight: 400;
+    }
+
+    .plan {
+        text-align: center;
+    }
+
+    .plan h1 {
+        display:inline;
+    }
+
+    .plan ul{
+        text-align: left;
+        /* width: 90%; */
+        margin: auto;
+    }
+
+    .plan span picture {
+        margin: auto;
+        justify-content: center;
+    }
 }
 
 /* Mobile view */
 
 @media(max-width:640px){
-    .wrapper {
-        padding: 10px;
-    }
-
     .menu{
         display: flex;
         width:30px;
@@ -454,9 +632,8 @@ h1 {
         align-items: center;
     }
 
-    .details> .schedule, .details .email {
+    .details .schedule, .details .email {
         height: 48px;
-        /* width: 80%; */
         width: 327px;
         margin-top: 15px;
     }
@@ -487,5 +664,49 @@ h1 {
     .finances {
         flex-direction: column;
         align-items: center;
+    }
+
+    /* Ready to start */
+    .ready {
+        /* height: 180px; */
+    }
+
+    .ready .details {
+        height: 140px;
+        display:block;
+        /* flex-wrap: wrap;
+        flex-direction: column; */
+    }
+
+    /* Page footer */
+    footer div{
+        flex-direction: column;
+        height: 353px;
+        padding: 20px 0;
+        justify-content: space-around;;
+    }
+
+    .footer-navbar {
+        height: 179px;
+        /* width: 179px; */
+        justify-content: space-around;
+    }
+    
+    .flex-nav.footer ul{
+        /* flex-grow: 0; */
+        justify-content: center;
+    }
+
+    /* pricing.html */
+    .plan-list {
+        flex-direction: column;
+    }
+
+    .plan {
+        margin: auto;
+    }
+
+    .plan hr{
+        width: 100%;
     }
 }
