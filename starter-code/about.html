@@ -11,58 +11,144 @@
     <!-- Css -->
     <link rel="stylesheet" href="./style.css">
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png" />
+    <!-- Javascript -->
+    <script src="./function.js"></script>
 
     <title>Frontend Mentor | PayAPI Website Challenge</title>
   </head>
 
   <body>
-    Pricing
-    About
-    Contact
-    Schedule a Demo
+    <div class="wrapper">
+      <header>
+        <picture class="logo">
+          <a href="/index.html">
+            <img src="./assets/Logo.svg" alt="Logo">
+          </a>
+        </picture>
+        
+        <span class="menu">
+          <img class="menu-open" src="./assets/shared/mobile/menu.svg" alt="menu" onClick="openMenu()">
+          <img class="menu-close" src="./assets/shared/mobile/close.svg" alt="close menu" onClick="closeMenu()">
+        </span>
+        
+        <div class="navbar">
+          <hr>
+          <nav class="flex-nav">
+            <ul>
+              <li><a href="/pricing.html">Pricing</a></li>
+              <li><a href="/about.html">About</a></li>
+              <li><a href="/contact.html">Contact</a></li>
+            </ul>
+          </nav>
+          <span>
+            <button class="schedule">Schedule a Demo</button>
+          </span>
+        </div>
+      </header>
 
-    We empower innovators by delivering access to the financial system
 
-    Our Vision
+      <main class="about-page">
+        <section>
+          <span>
+            <h1 class="about-title">We empower innovators by delivering access to the financial system</h1>
+          </span>
+          <span class="about">
+            <h1>Our Vision</h1>
+            <p>Our main goal is to build beautiful consumer experiences along with developer-friendly 
+              infrastructure. The result is an intelligent tool that gives everyone the ability to create 
+              amazing products that solve big problems. We are deeply focused on democratizing financial 
+              services through technology.</p>
+          </span>
 
-    Our main goal is to build beautiful consumer experiences along with developer-friendly 
-    infrastructure. The result is an intelligent tool that gives everyone the ability to create 
-    amazing products that solve big problems. We are deeply focused on democratizing financial 
-    services through technology.
+          <span class="about">
+            <h1>Our Business</h1>
+            <p>At the core of our platform is the technical infrastructure APIs that connect consumers. 
+              Our innovative product provides key insights for businesses and individuals, as well as 
+              robust reporting for traditional financial institutions and developers.</p>
+          </span> 
+        </section>
 
-    Our Business
+          <picture>
+            <img src="./assets/about/desktop/image-team-members.jpg" alt="desktop team image" class="team-desktop">
+            <img src="./assets/about/tablet/image-team-members.jpg" alt="tablet team image" class="team-tablet">
+            <img src="./assets/about/mobile/image-team-members.jpg" alt="mobile team image" class="team-mobile">
+          </picture>
 
-    At the core of our platform is the technical infrastructure APIs that connect consumers. 
-    Our innovative product provides key insights for businesses and individuals, as well as 
-    robust reporting for traditional financial institutions and developers.
+        <hr class="start-line">
+        <section>
+          <span class="about team-details">
+            <div>
+              <hr>
+              <p>Team Members</p>
+              <h1>300+</h1>
+              <hr>
+            </div>
 
-    Team Members 
-    300+
+            <div>
+              <hr>
+              <p>Offices in the US</p>
+              <h1>3</h1>
+              <hr>
+            </div>
 
-    Offices in the US 
-    3
+            <div>
+              <hr>
+              <p>Transactions analyzed</p>
+              <h1>10M+</h1>
+              <hr>
+            </div>
+          </span>
+          <hr class="end-line">
 
-    Transactions analyzed 
-    10M+
+          <span class="about">
+            <h1>The Culture</h1>
+            <p>We strongly believe there's always an opportunity to learn from each other outside of 
+              day-to-day work, whether it's company-wide offsites, internal hackathons, or co-worker meetups. 
+              We always value cross-team collaboration and diversity of thought, no matter the job title.</p>
+          </span>
 
-    The Culture
+          <span class="about">
+            <h1>The People</h1>
+            <p>We're all passionate about building a more efficient and inclusive financial infrastructure 
+              together. At PayAPI, we have diverse backgrounds and skills.</p>
+          </span>
+        </section>
+        
+        <section class="ready">
+          <h1>Ready to start? </h1>
+          <span class="details">
+            <input type="email" class="email" placeholder="Enter email address">
+            <button class="schedule">Schedule a Demo</button>
+          </span>
+        </section>
+      </main>
 
-    We strongly believe there's always an opportunity to learn from each other outside of 
-    day-to-day work, whether it's company-wide offsites, internal hackathons, or co-worker meetups. 
-    We always value cross-team collaboration and diversity of thought, no matter the job title.
 
-    The People
-    
-    We're all passionate about building a more efficient and inclusive financial infrastructure 
-    together. At PayAPI, we have diverse backgrounds and skills.
+      <!-- Page Footer -->
+      <footer>
+        <div>
+          <picture class="logo">
+            <img src="./assets/Logo-footer.svg" alt="Logo">
+          </picture>
+          <div class="footer-navbar">
 
-    Ready to start? 
-    Enter email address 
-    Schedule a Demo
-
-    Pricing
-    About
-    Contact
+            <nav class="flex-nav footer">
+              <ul>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </nav>
+            <span>
+              <picture>
+                <img src="./assets/shared/desktop/facebook.svg" alt="facebook" class="social">
+                <img src="./assets/shared/desktop/twitter.svg" alt="twitter" class="social">
+                <img src="./assets/shared/desktop/linkedin.svg" alt="linkedin" class="social">
+              </picture>
+            </span>
+          </div>
+        </div>
+      </footer>
+    </div>
   </body>
-
 </html>

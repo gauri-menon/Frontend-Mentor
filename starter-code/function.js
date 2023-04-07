@@ -14,3 +14,7 @@ function closeMenu() {
     document.getElementsByClassName("menu-open")[0].style.display="initial";
     document.getElementsByClassName("navbar")[0].style.display="none";
 }
+
+function validateForm() {
+    var x=document.getElementsByTagName("form");
+}

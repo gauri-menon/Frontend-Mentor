@@ -27,7 +27,7 @@ p {
 h1 {
     font-size: 48px;
     font-family: 'DM Serif Display', serif;
-    width: 550px;
+    width: 555px;
     color: #36536B;
     font-weight: 500;
 }
@@ -398,6 +398,165 @@ footer div {
 }
 
 
+
+/* about.html */
+.about-page span{
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+    /* padding: 30px; */
+}
+
+.about h1{
+    font-size: 32px;
+    flex: 0 1 255px;
+    margin: 0;
+}
+
+.about {
+    /* width: 921px;     */
+    /* display: flex; */
+    align-items: flex-start;
+}
+
+.about p {
+    /* width: 635px; */
+    flex: 0 1 635px;
+    line-height: 28px;
+    margin: 0;;
+}
+
+.about-title {
+    font-size: 56px;
+    /* flex: 0 1 655px; */
+    flex: 0 1 890px;
+    padding-right:200px;
+}
+
+.about-page picture img {
+    width: 100%;
+    height: auto;
+}
+
+.team-mobile, .team-tablet{
+    display:none;
+}
+
+.about.team-details {
+    justify-content: space-between;
+    margin: 0 100px;
+}
+
+.team-details div {
+    flex: 1 1 350px;
+}
+
+.team-details h1{
+    font-size: 56px;
+    color: #BA4270;
+    display: inline;
+}
+
+.team-details hr{
+    display:block;
+    width: 80%;
+    margin: 10px 0;
+}
+
+
+
+/* contact.html */
+main .contact-page section{
+    display: flex;
+}
+
+form {
+    width: 500px;
+    margin:0;
+}
+
+form div input[type=text] {
+    width:445px;
+    background-color: rgba(251,251,251,0);
+    border: none;
+    border-bottom: 0.5px solid #36536B;
+    padding: 20px;
+    transition: 0.2s;
+}
+
+form div {
+    margin-bottom: 20px;
+    width: 445px;
+    color: #36536B;
+}
+
+form div:hover{
+    color:#979797;
+}
+
+form input:hover {
+    border:none;
+    border-bottom:0.5px solid #979797;
+}
+
+form div:active {
+    color: #FF0000;
+}
+
+form div *:focus {
+    border:none;
+    outline: none;
+    border-bottom: 0.5px solid #FF0000;
+}
+
+form div input[type=checkbox]{
+    width:24px;
+    height: 24px;
+}
+
+.check-box{
+    height: 24px;
+    display: flex;
+}
+
+.check-box p {
+    margin: 0;
+}
+
+.submit {
+    width:152px;
+    height: 48px;
+    margin: 10px 0;
+    background-color: rgba(251,251,251,0);
+    border-radius: 40px;
+    border:1px solid #36536B;
+    color: #36536B;
+}
+
+.submit:hover {
+    background-color: #36536B;
+    color:#fbfcfb
+}
+
+.contact-page h2 {
+    color: #6c8294;
+    font-size: 24px;
+    width:445px;
+}
+
+.partner-list {
+    width: 561px;
+}
+
+.partner-list picture{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+}
+.partner-list picture img {
+    width: 140px;
+}
+
 /* Tablet view */
 @media(max-width:1155px){
     /* index.html */
@@ -513,6 +672,27 @@ footer div {
         margin: auto;
         justify-content: center;
     }
+
+
+
+    /* about.html */
+    .about-title {
+        font-size: 48px;
+        padding: 30px 0;
+        flex: 0 1 655px;
+    }
+
+    .team-tablet{
+        display: block;
+    }
+
+    .team-desktop {
+        display:none;
+    }
+
+    .about{
+        margin: 0 40px;
+    }
 }
 
 /* Mobile view */
@@ -528,9 +708,10 @@ footer div {
     }
 
     hr {
-        margin:0;
+        margin:auto;
         align-self: flex-end;
-        width:60%;
+        width:90%;
+        margin-bottom: 40px;
     }
 
     header {
@@ -558,11 +739,13 @@ footer div {
         background-color: rgba(27,38,47,0.9);
         /* align-content: stretch; */
         flex:1 1 75%;
-        height:100vh;
-
+        height:100%;
+        padding-top:41px;
         display:none;
-        /* z-index:1;
-        position:relative; */
+        z-index:1;
+        right:0;
+        position:fixed;
+        width: 300px;
     }
     
     .navbar span {
@@ -667,15 +850,19 @@ footer div {
     }
 
     /* Ready to start */
-    .ready {
-        /* height: 180px; */
-    }
+    /* .ready {
+        height: 180px;
+    } */
 
     .ready .details {
         height: 140px;
         display:block;
         /* flex-wrap: wrap;
         flex-direction: column; */
+    }
+
+    .ready h1 {
+        width: 328px;
     }
 
     /* Page footer */
@@ -708,5 +895,64 @@ footer div {
 
     .plan hr{
         width: 100%;
+    }
+
+
+    /* about.html */
+
+
+    .about-title {
+        font-size: 32px;
+        flex: 0 1 340px;
+    }
+
+    .about h1 {
+        font-size: 24px;
+        width: 255px;
+        height: 32px;
+        display: block;
+    }
+
+    span.about {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        height: 255px;
+        margin: 0;
+        margin-top: 40px;
+    }
+
+    .team-tablet {
+        display:none;
+    }
+
+    .team-mobile {
+        display: block;
+    }
+
+    .team-details hr {
+        display: none;
+    }
+
+    hr.start-line, hr.end-line {
+        display: block;
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    .about.team-details {
+        width: 100%;
+        margin:0;
+    }
+
+    .about-page .ready {
+        margin-top: 0;
+    }
+
+
+    /* contact.html */
+    .contact-page section h1 {
+        font-size: 32px;
+        width: 327px;
     }
 }

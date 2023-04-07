@@ -11,27 +11,133 @@
     <!-- Css -->
     <link rel="stylesheet" href="./style.css">
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png" />
-
+    <!-- Javascript -->
+    <script src="./function.js"></script>
     <title>Frontend Mentor | PayAPI Website Challenge</title>
   </head>
 
   <body>
-    Pricing
-    About
-    Contact
-    Schedule a Demo
+    <div class="wrapper">
+      <header>
+        <picture class="logo">
+          <a href="/index.html">
+            <img src="./assets/Logo.svg" alt="Logo">
+          </a>
+        </picture>
+        
+        <span class="menu">
+          <img class="menu-open" src="./assets/shared/mobile/menu.svg" alt="menu" onClick="openMenu()">
+          <img class="menu-close" src="./assets/shared/mobile/close.svg" alt="close menu" onClick="closeMenu()">
+        </span>
+        
+        <div class="navbar">
+          <hr>
+          <nav class="flex-nav">
+            <ul>
+              <li><a href="/pricing.html">Pricing</a></li>
+              <li><a href="/about.html">About</a></li>
+              <li><a href="/contact.html">Contact</a></li>
+            </ul>
+          </nav>
+          <span>
+            <button class="schedule">Schedule a Demo</button>
+          </span>
+        </div>
+      </header>
 
-    Submit a help request and we’ll get in touch shortly.
+      <main class="contact-page">
+        <section>
+          <h1>Submit a help request and we’ll get in touch shortly.</h1>
+        </section>
+        <section>
+          <form name="contactForm" onsubmit="return validateForm()">
+            <div>
+              <label>Name</label>
+              <input type="text" name="fname" required/>
+              <p class="missing-field"></p>
+            </div>
+
+            <div>
+              <label>Email Address</label>
+              <input type="text" name="femail" required/>
+            </div>
+            
+            <div>
+              <label>Company Name</label>
+              <input type="text" name="fcname" required/>
+            </div>
+            
+            <div>
+            <label>Title</label>
+            <input type="text" name="ftitle" required/>
+            </div>
+            
+            <div>
+              <label>Message</label>
+              <input type="text" name="fmessage">
+            </div>
+
+            <div class="check-box">
+              <input type="checkbox">
+              <p >Stay up-to-date with company announcements and updates to our API</p>
+            </div>
+
+            <input type="submit" class="submit">
+          </form>
+
+          <section class="partner-list">
+            <h2>Join the thousands of innovators already building with us</h2>
+            <picture>
+              <img src="./assets/shared/desktop/tesla.svg" alt="tesla">
+              <img src="./assets/shared/desktop/microsoft.svg" alt="microsoft">
+              <img src="./assets/shared/desktop/hewlett-packard.svg" alt="HP">
+              <img src="./assets/shared/desktop/oracle.svg" alt="oracle">
+              <img src="./assets/shared/desktop/google.svg" alt="google">
+              <img src="./assets/shared/desktop/nvidia.svg" alt="nvidia">
+            </picture>
+          </section>
+        </section>
+      </main>
+
+      <footer>
+        <div>
+          <picture class="logo">
+            <img src="./assets/Logo-footer.svg" alt="Logo">
+          </picture>
+          <div class="footer-navbar">
+  
+            <nav class="flex-nav footer">
+              <ul>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </nav>
+            <span>
+              <picture>
+                <img src="./assets/shared/desktop/facebook.svg" alt="facebook" class="social">
+                <img src="./assets/shared/desktop/twitter.svg" alt="twitter" class="social">
+                <img src="./assets/shared/desktop/linkedin.svg" alt="linkedin" class="social">
+              </picture>
+            </span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+
+    <!-- 
+    
     
     Name
     Email Address
     Company Name
     Title
     Message
-    Stay up-to-date with company announcements and updates to our API
+    
     Submit
 
-    Join the thousands of innovators already building with us
+    
 
     Ready to start? 
     Enter email address 
@@ -39,7 +145,7 @@
 
     Pricing
     About
-    Contact
+    Contact -->
   </body>
 
 </html>
