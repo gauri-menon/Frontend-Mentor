@@ -4,6 +4,7 @@ html {
     box-sizing: border-box;
     height:100%;
     width: 100%;
+    overflow-x: hidden;
 }
 
 *, *:before, *:after{
@@ -14,10 +15,28 @@ html {
     margin-top: 40px;
 }
 
+/* .bg-image-index {
+    order:10;
+    right:0;
+    top:30px;
+    margin: -200px;
+    z-index:-1;
+    position: absolute;
+} */
+
 body {
     background-color: rgb(234, 239, 248);
     font-family: 'Public Sans', sans-serif;
     font-size: 15px;
+    background-repeat: no-repeat;
+    background-position: 120% -150%;
+    background-image: url("./assets/shared/desktop/bg-pattern-circle.svg");
+}
+
+body.index {
+    background-repeat: no-repeat;
+    background-position: 110% -150%;
+    background-image: url("./assets/shared/desktop/bg-pattern-circle.svg");
 }
 
 p {
@@ -38,6 +57,9 @@ h2 {
     font-family: 'DM Serif Display', serif;
 }
 
+
+
+
 /* Header-Container */
 
 
@@ -57,18 +79,14 @@ hr {
 
 .navbar {
     flex-grow: 1;
-    /* flex-basis: 600px; */
     flex-grow:2;
     display:flex;
     justify-content: space-between;
     align-items: center;
-    /* flex-wrap: wrap; */
 }
 
 .flex-nav {
-    /* flex-grow: 1; */
     margin: 0 5%;
-    /* align-self: flex-start; */
     flex-basis: 500px;
 }
 
@@ -78,10 +96,8 @@ hr {
     list-style: none;
     padding:0;
     margin:0;
-    /* margin-top: 15px; */
     display:flex;
     justify-content: space-around;
-    /* flex-wrap: wrap; */
 }
 
 /* Navbar-Item */
@@ -103,7 +119,6 @@ hr {
 
 /* Schedule button */
 .schedule {
-    /* float:right; */
     background-color: rgb(186,66,112);
     color: rgb(251,252,254);
     border:none;
@@ -174,8 +189,13 @@ main section {
 }
 
 /* Mid-page footer */
+
+/* .bg-image-2{
+    overflow: hidden;
+    margin:-650px;
+} */
+
 .first-page-footer {
-    /* padding: 40px; */
     padding: 40px 100px;
     background-color: #1b262f;
     display: flex;
@@ -185,7 +205,6 @@ main section {
 }
 
 .first-page-footer h1{
-    /* font-size: 48px; */
     color: #fbfcfb;
     display: inline;
 }
@@ -208,7 +227,7 @@ main section {
     transition: 0.1s;
 }
 
-.about-us:active{
+.about-us:hover{
     color: #1b262f;
     background-color:#fbfcfb;
 }
@@ -229,9 +248,20 @@ main section {
 
 /* After mid-page footer */
 
+.bg-image-index-2 {
+    z-index:-1;
+    position: absolute;
+    margin: -500px;
+    right:0;
+}
+
+.about-implementation {
+    background-image: url("./assets/shared/desktop/bg-pattern-circle.svg");
+    background-repeat: no-repeat;
+    background-position: 130%;
+}
+
 .implement div{
-    /* flex-wrap: wrap; */
-    /* justify-content: space-between; */
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -289,7 +319,6 @@ main section {
 footer {
     background: #1b262f;
     padding: 0 100px;
-    /* height: 100px; */
 }
 
 footer div {
@@ -325,12 +354,22 @@ footer div {
 
 .footer-navbar span picture img:hover {
     filter: invert(72%) sepia(17%) saturate(5114%) hue-rotate(296deg) brightness(100%) contrast(95%);
-    /* color:#da6d97 */
 }
 
 /* pricing.html */
 
+.bg-image {
+    margin: -80px;
+    margin-top: -650px;
+    right: 0;
+    order:10;
+    overflow: hidden;
+    z-index: -1;
+    position: absolute;
+}
+
 .plan-list{
+    margin: 0;
     display:flex;
     justify-content: space-between;
 }
@@ -344,19 +383,15 @@ footer div {
 .pricing h1 {
     margin:0;
     width: 120px;
-    /* display: inline; */
 }
 
 .plan hr {
     width: 90%;
     display: block;
     margin:0;
-    /* background-color: black;
-    border:solid; */
 }
 
 .no-check {
-    /* height:47px; */
     padding:15px;
     margin-left:15px;
     color: #6c8294;
@@ -404,7 +439,6 @@ footer div {
     display: flex;
     justify-content: center;
     margin: 40px 0;
-    /* padding: 30px; */
 }
 
 .about h1{
@@ -414,13 +448,10 @@ footer div {
 }
 
 .about {
-    /* width: 921px;     */
-    /* display: flex; */
     align-items: flex-start;
 }
 
 .about p {
-    /* width: 635px; */
     flex: 0 1 635px;
     line-height: 28px;
     margin: 0;;
@@ -428,10 +459,16 @@ footer div {
 
 .about-title {
     font-size: 56px;
-    /* flex: 0 1 655px; */
     flex: 0 1 890px;
     padding-right:200px;
 }
+
+/* .bg-image-2 {
+    z-index:-1;
+    position:absolute;
+    margin: -100px;
+    margin-left: -400px;
+} */
 
 .about-page picture img {
     width: 100%;
@@ -445,6 +482,7 @@ footer div {
 .about.team-details {
     justify-content: space-between;
     margin: 0 100px;
+    flex: 1 1 350px;
 }
 
 .team-details div {
@@ -466,16 +504,18 @@ footer div {
 
 
 /* contact.html */
-main .contact-page section{
+main.contact-page section{
     display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 form {
-    width: 500px;
-    margin:0;
+    flex-basis: 500px;
+    flex-shrink:1;
 }
 
-form div input[type=text] {
+.field input[type=text] {
     width:445px;
     background-color: rgba(251,251,251,0);
     border: none;
@@ -484,32 +524,31 @@ form div input[type=text] {
     transition: 0.2s;
 }
 
-form div {
+.field {
     margin-bottom: 20px;
     width: 445px;
     color: #36536B;
 }
 
-form div:hover{
+.field:hover{
     color:#979797;
 }
 
-form input:hover {
-    border:none;
+.field input[type=text]:hover {
     border-bottom:0.5px solid #979797;
 }
 
-form div:active {
+.field:active {
     color: #FF0000;
 }
 
-form div *:focus {
+.field *:focus {
     border:none;
     outline: none;
     border-bottom: 0.5px solid #FF0000;
 }
 
-form div input[type=checkbox]{
+.field input[type=checkbox]{
     width:24px;
     height: 24px;
 }
@@ -545,7 +584,16 @@ form div input[type=checkbox]{
 }
 
 .partner-list {
-    width: 561px;
+    width: 661px;
+    margin: 0;
+    display: flex;
+    flex-wrap:wrap;
+
+}
+
+.partner-list h2 {
+    width: 445px;
+    font-weight: 500;
 }
 
 .partner-list picture{
@@ -553,16 +601,46 @@ form div input[type=checkbox]{
     flex-wrap:wrap;
     justify-content: space-between;
 }
+
 .partner-list picture img {
-    width: 140px;
+    margin: 15px;
 }
+
+.check-box input[type=checkbox] {
+    accent-color: #BA4270;
+}
+
+p.missing-field {
+    font-size: 11px;
+    color: #FF0000;
+}
+
 
 /* Tablet view */
 @media(max-width:1155px){
+    body {
+        background-position: 280% -170%;
+    }
+
+    body.index {
+        background-position: 50% -100%;
+    }
+
     /* index.html */
     /* Navbar */
     header{
-        margin: 0 40px;
+        margin: 0 15px;
+    }
+
+    /* .bg-image-index {
+        top:0;
+        right:auto;
+        margin: 0;
+        margin-top: -400px;
+    } */
+
+    .wrapper {
+        margin:0;
     }
 
     /* Main */
@@ -583,8 +661,6 @@ form div input[type=checkbox]{
     }
 
     .first-page span p {
-        /* margin: auto;
-        display:inline; */
         text-align: center;
     }
 
@@ -614,6 +690,14 @@ form div input[type=checkbox]{
 
 
     /* After first footer */
+    /* .bg-image-index-2 .bg-circle{
+        display:none;
+    } */
+
+    .about-implementation {
+        background-image: none;
+    }
+
     .implement div span {
         width: 580px;
         text-align: center;
@@ -673,7 +757,10 @@ form div input[type=checkbox]{
         justify-content: center;
     }
 
-
+    .bg-image {
+        margin: -450px;
+        margin-top: -650px;
+    }
 
     /* about.html */
     .about-title {
@@ -693,11 +780,29 @@ form div input[type=checkbox]{
     .about{
         margin: 0 40px;
     }
+
+
+    /* contact.html */
+    main.contact-page section {
+        flex-direction: column;
+    }
 }
 
 /* Mobile view */
 
 @media(max-width:640px){
+    body {
+        background-position: 250px -200%;
+    }
+
+    body.index {
+        background-position: 50% -150%;
+    }
+
+    /* .bg-image-index {
+        margin: -500px -200px;
+    } */
+
     .menu{
         display: flex;
         width:30px;
@@ -716,8 +821,6 @@ form div input[type=checkbox]{
 
     header {
         align-items: flex-start;
-        /* z-index: 1;
-        position: relative; */
     }
 
     .menu-close {
@@ -726,18 +829,12 @@ form div input[type=checkbox]{
         position: fixed;
     }
 
-    picture {
-        z-index: 1;
-        position: relative;
-    }
 
     .navbar {
         
         flex-direction: column;
         justify-content:flex-end;
-        /* column-gap: 20px; */
-        background-color: rgba(27,38,47,0.9);
-        /* align-content: stretch; */
+        background-color: rgba(27,38,47,0.95);
         flex:1 1 75%;
         height:100%;
         padding-top:41px;
@@ -760,16 +857,12 @@ form div input[type=checkbox]{
     .flex-nav ul{
         justify-content: center;
         flex-direction: column;
-        /* flex:1 1 75%; */
         flex-wrap: wrap;
         align-items: center;
         height:100%;
-        /* flex-grow:1; */
     }
     
     .flex-nav ul li {
-        /* text-align: center; */
-        /* align-items:center; */
         flex-grow:1;
     }
 
@@ -840,7 +933,7 @@ form div input[type=checkbox]{
     }
 
     .implement div picture img {
-        width: 400px;
+        width: 320px;
     }
     
     /* Finances */
@@ -850,19 +943,15 @@ form div input[type=checkbox]{
     }
 
     /* Ready to start */
-    /* .ready {
-        height: 180px;
-    } */
 
     .ready .details {
         height: 140px;
         display:block;
-        /* flex-wrap: wrap;
-        flex-direction: column; */
+        width: 370px;
     }
-
-    .ready h1 {
-        width: 328px;
+    
+    section.ready h1 {
+        width: 200px;
     }
 
     /* Page footer */
@@ -875,12 +964,10 @@ form div input[type=checkbox]{
 
     .footer-navbar {
         height: 179px;
-        /* width: 179px; */
         justify-content: space-around;
     }
     
     .flex-nav.footer ul{
-        /* flex-grow: 0; */
         justify-content: center;
     }
 
@@ -890,6 +977,8 @@ form div input[type=checkbox]{
     }
 
     .plan {
+
+        width:90%;
         margin: auto;
     }
 
@@ -897,9 +986,7 @@ form div input[type=checkbox]{
         width: 100%;
     }
 
-
     /* about.html */
-
 
     .about-title {
         font-size: 32px;
@@ -955,4 +1042,45 @@ form div input[type=checkbox]{
         font-size: 32px;
         width: 327px;
     }
+
+    .partner-list{
+        width: 340px;
+        flex-wrap: wrap;
+        padding:0;
+        flex-direction: column;
+    }
+
+    .partner-list picture{
+        flex-grow: 1;
+        flex-shrink:1;
+    }
+
+    .partner-list h2{
+        width: 327px;
+        text-align: center;
+    }
+
+    .field, .field input[type=text] {
+        margin:auto;
+        width:340px;
+    }
+
+    form {
+        width: 340px;
+        margin:auto;
+    }
+
+    .contact-page section {
+        padding: 0;
+    }
+
+    .check-box {
+        height:40px;
+    }
+
+    .submit {
+        margin: 10px auto;
+
+    }
+
 }

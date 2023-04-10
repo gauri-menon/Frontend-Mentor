@@ -19,6 +19,9 @@
   <body>
     <div class="wrapper">
       <header>
+        <!-- <div class="bg-image">
+          <img class="bg-circle" src="./assets/shared/desktop/bg-pattern-circle.svg" alt="">
+        </div> -->
         <picture class="logo">
           <a href="/index.html">
             <img src="./assets/Logo.svg" alt="Logo">
@@ -50,41 +53,50 @@
           <h1>Submit a help request and we’ll get in touch shortly.</h1>
         </section>
         <section>
-          <form name="contactForm" onsubmit="return validateForm()">
-            <div>
-              <label>Name</label>
-              <input type="text" name="fname" required/>
+
+          <!-- Form -->
+          <span>
+            <form name="contactForm" onsubmit="return validateForm()">
+              <div class="field">
+                <label>Name</label>
+                <input class="field-input" type="text" name="fname" required/>
+                <p class="missing-field"></p>
+              </div>
+
+              <div class="field">
+                <label>Email Address</label>
+                <input class="field-input" type="text" name="femail" required/>
+                <p class="missing-field"></p>
+              </div>
+              
+              <div class="field">
+                <label>Company Name</label>
+                <input class="field-input" type="text" name="fcname" required/>
+                <p class="missing-field"></p>
+              </div>
+              
+              <div class="field">
+              <label>Title</label>
+              <input class="field-input" type="text" name="ftitle" required/>
               <p class="missing-field"></p>
-            </div>
+              </div>
+              
+              <div class="field">
+                <label>Message</label>
+                <input class="field-input" type="text" name="fmessage" required/>
+                <p class="missing-field"></p>
+              </div>
 
-            <div>
-              <label>Email Address</label>
-              <input type="text" name="femail" required/>
-            </div>
-            
-            <div>
-              <label>Company Name</label>
-              <input type="text" name="fcname" required/>
-            </div>
-            
-            <div>
-            <label>Title</label>
-            <input type="text" name="ftitle" required/>
-            </div>
-            
-            <div>
-              <label>Message</label>
-              <input type="text" name="fmessage">
-            </div>
+              <div class="check-box">
+                <input type="checkbox">
+                <p >Stay up-to-date with company announcements and updates to our API</p>
+              </div>
 
-            <div class="check-box">
-              <input type="checkbox">
-              <p >Stay up-to-date with company announcements and updates to our API</p>
-            </div>
+              <input type="submit" class="submit" onClick="validateForm()">
+            </form>
+          </span>
 
-            <input type="submit" class="submit">
-          </form>
-
+          <!-- Partners -->
           <section class="partner-list">
             <h2>Join the thousands of innovators already building with us</h2>
             <picture>
@@ -97,8 +109,17 @@
             </picture>
           </section>
         </section>
+
+        <section class="ready">
+          <h1>Ready to start? </h1>
+          <span class="details">
+            <input type="email" class="email" placeholder="Enter email address">
+            <button class="schedule">Schedule a Demo</button>
+          </span>
+        </section>
       </main>
 
+      <!-- Footer -->
       <footer>
         <div>
           <picture class="logo">
@@ -124,28 +145,5 @@
         </div>
       </footer>
     </div>
-
-
-    <!-- 
-    
-    
-    Name
-    Email Address
-    Company Name
-    Title
-    Message
-    
-    Submit
-
-    
-
-    Ready to start? 
-    Enter email address 
-    Schedule a Demo
-
-    Pricing
-    About
-    Contact -->
   </body>
-
 </html>
