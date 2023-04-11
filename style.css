@@ -29,13 +29,13 @@ body {
     font-family: 'Public Sans', sans-serif;
     font-size: 15px;
     background-repeat: no-repeat;
-    background-position: 120% -150%;
+    background-position: right -150px top -570px;
     background-image: url("./assets/shared/desktop/bg-pattern-circle.svg");
 }
 
 body.index {
     background-repeat: no-repeat;
-    background-position: 110% -150%;
+    background-position: right -100px top -200px;
     background-image: url("./assets/shared/desktop/bg-pattern-circle.svg");
 }
 
@@ -64,9 +64,10 @@ h2 {
 
 
 /* NavBar */
-header {
+header{
+    max-width: 1740px;
     display: flex;
-    margin: 0 100px;
+    margin: auto;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
@@ -143,10 +144,16 @@ hr {
 /* index.html */
 /* Main */
 
-main section {
+.first-page, .first-page-footer> div, .about-implementation> div, .ready, footer> div, .pricing, .plan-list> div {
+    max-width: 1740px;
+    margin: auto;
+}
+
+
+/* main section {
     margin-top:30px;
     padding: 0 100px;
-} 
+}  */
 
 .first-page {
     display: flex;
@@ -195,13 +202,17 @@ main section {
     margin:-650px;
 } */
 
-.first-page-footer {
-    padding: 40px 100px;
-    background-color: #1b262f;
+.first-page-footer> div {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+}
+
+.first-page-footer {
+    padding: 40px 0;
+    background-color: #1b262f;
 }
 
 .first-page-footer h1{
@@ -214,7 +225,14 @@ main section {
 }
 
 .info {
-    width: 445px;
+    flex: 0 1 445px;
+    /* width: 445px; */
+    margin: 0;
+}
+
+.partners {
+    width: 536px;
+    flex: 0 1 536px;
 }
 
 .about-us {
@@ -235,7 +253,6 @@ main section {
 .partners picture {
     display: flex;
     flex-wrap: wrap;
-    width: 536px;
     flex:1;
     justify-content: space-between;
 }
@@ -248,24 +265,24 @@ main section {
 
 /* After mid-page footer */
 
-.bg-image-index-2 {
+/* .bg-image-index-2 {
     z-index:-1;
     position: absolute;
     margin: -500px;
     right:0;
-}
+} */
 
 .about-implementation {
     background-image: url("./assets/shared/desktop/bg-pattern-circle.svg");
     background-repeat: no-repeat;
-    background-position: 130%;
+    background-position: right -350px top 200px;
 }
 
 .implement div{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 .implement div span {
@@ -318,7 +335,7 @@ main section {
 /* Footer */
 footer {
     background: #1b262f;
-    padding: 0 100px;
+    /* padding: 0 100px; */
 }
 
 footer div {
@@ -358,7 +375,7 @@ footer div {
 
 /* pricing.html */
 
-.bg-image {
+/* .bg-image {
     margin: -80px;
     margin-top: -650px;
     right: 0;
@@ -366,10 +383,11 @@ footer div {
     overflow: hidden;
     z-index: -1;
     position: absolute;
-}
+} */
 
-.plan-list{
-    margin: 0;
+
+
+.plan-list> div{
     display:flex;
     justify-content: space-between;
 }
@@ -480,13 +498,14 @@ footer div {
 }
 
 .about.team-details {
+    max-width: 1740px;
     justify-content: space-between;
-    margin: 0 100px;
+    margin: auto;
     flex: 1 1 350px;
 }
 
 .team-details div {
-    flex: 1 1 350px;
+    flex: 0 1 350px;
 }
 
 .team-details h1{
@@ -497,13 +516,18 @@ footer div {
 
 .team-details hr{
     display:block;
-    width: 80%;
+    width: 95%;
     margin: 10px 0;
 }
 
 
 
 /* contact.html */
+main.contact-page {
+    max-width: 1740px;
+    margin:auto;
+}
+
 main.contact-page section{
     display: flex;
     justify-content: space-between;
@@ -619,18 +643,18 @@ p.missing-field {
 /* Tablet view */
 @media(max-width:1155px){
     body {
-        background-position: 280% -170%;
+        background-position: right -400px top -580px;
     }
 
     body.index {
-        background-position: 50% -100%;
+        background-position: center top -450px;
     }
 
     /* index.html */
     /* Navbar */
-    header{
+    /* header{
         margin: 0 15px;
-    }
+    } */
 
     /* .bg-image-index {
         top:0;
@@ -644,12 +668,12 @@ p.missing-field {
     }
 
     /* Main */
-    main section{
+    /* main section{
         padding: 0 40px;
-    }
+    } */
 
     h1, .start {
-        width: 573;
+        width: 573px;
         font-size: 48px;
         text-align: center;
         margin: auto;
@@ -678,7 +702,7 @@ p.missing-field {
         margin: auto;
     }
 
-    .first-page-footer {
+    .first-page-footer> div {
         text-align: center;
         justify-content: center;
     }
@@ -722,9 +746,9 @@ p.missing-field {
         text-align: center;
     }
     
-    footer {
+    /* footer {
         padding: 0 40px;
-    }
+    } */
 
 
     /* pricing.html */
@@ -777,9 +801,16 @@ p.missing-field {
         display:none;
     }
 
-    .about{
-        margin: 0 40px;
+    span.about{
+        /* margin: auto; */
+        justify-content: space-between;
+        /* max-width:890px; */
     }
+
+    span.about> h1 {
+        text-align: left;
+    }
+
 
 
     /* contact.html */
@@ -792,11 +823,7 @@ p.missing-field {
 
 @media(max-width:640px){
     body {
-        background-position: 250px -200%;
-    }
-
-    body.index {
-        background-position: 50% -150%;
+        background-position: right -500px top -600px;
     }
 
     /* .bg-image-index {
@@ -915,7 +942,8 @@ p.missing-field {
     }
 
     .partners> picture {
-        width: 280px;
+        /* width: 280px; */
+        /* margin: auto; */
     }
 
     .partners picture img {
@@ -923,8 +951,10 @@ p.missing-field {
     }
 
     .info {
-        width: 327px;   
+        /* width: 327px;    */
     }
+
+    /* Mid page footer */
 
 
     /* After first footer */
@@ -972,7 +1002,7 @@ p.missing-field {
     }
 
     /* pricing.html */
-    .plan-list {
+    .plan-list> div {
         flex-direction: column;
     }
 
@@ -998,6 +1028,7 @@ p.missing-field {
         width: 255px;
         height: 32px;
         display: block;
+        text-align: center;
     }
 
     span.about {
@@ -1007,6 +1038,14 @@ p.missing-field {
         height: 255px;
         margin: 0;
         margin-top: 40px;
+    }
+
+    span.about> h1 {
+        text-align: center;
+    }
+
+    span.about> p {
+        height:auto;
     }
 
     .team-tablet {
