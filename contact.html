@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Public+Sans:wght@500&display=swap" rel="stylesheet">
+    <!-- Css -->
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png" />
+    <!-- Javascript -->
+    <script src="./function.js"></script>
+    <title>Frontend Mentor | PayAPI Website Challenge</title>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <header>
+        <!-- <div class="bg-image">
+          <img class="bg-circle" src="./assets/shared/desktop/bg-pattern-circle.svg" alt="">
+        </div> -->
+        <picture class="logo">
+          <a href="/index.html">
+            <img src="./assets/Logo.svg" alt="Logo">
+          </a>
+        </picture>
+        
+        <span class="menu">
+          <img class="menu-open" src="./assets/shared/mobile/menu.svg" alt="menu" onClick="openMenu()">
+          <img class="menu-close" src="./assets/shared/mobile/close.svg" alt="close menu" onClick="closeMenu()">
+        </span>
+        
+        <div class="navbar">
+          <hr>
+          <nav class="flex-nav">
+            <ul>
+              <li><a href="/pricing.html">Pricing</a></li>
+              <li><a href="/about.html">About</a></li>
+              <li><a href="/contact.html">Contact</a></li>
+            </ul>
+          </nav>
+          <span>
+            <button class="schedule">Schedule a Demo</button>
+          </span>
+        </div>
+      </header>
+
+      <main class="contact-page">
+        <section>
+          <h1>Submit a help request and we’ll get in touch shortly.</h1>
+        </section>
+        <section>
+
+          <!-- Form -->
+          <span>
+            <form name="contactForm" onsubmit="return validateForm()">
+              <div class="field">
+                <label>Name</label>
+                <input class="field-input" type="text" name="fname" required/>
+                <p class="missing-field"></p>
+              </div>
+
+              <div class="field">
+                <label>Email Address</label>
+                <input class="field-input" type="text" name="femail" required/>
+                <p class="missing-field"></p>
+              </div>
+              
+              <div class="field">
+                <label>Company Name</label>
+                <input class="field-input" type="text" name="fcname" required/>
+                <p class="missing-field"></p>
+              </div>
+              
+              <div class="field">
+              <label>Title</label>
+              <input class="field-input" type="text" name="ftitle" required/>
+              <p class="missing-field"></p>
+              </div>
+              
+              <div class="field">
+                <label>Message</label>
+                <input class="field-input" type="text" name="fmessage" required/>
+                <p class="missing-field"></p>
+              </div>
+
+              <div class="check-box">
+                <input type="checkbox">
+                <p >Stay up-to-date with company announcements and updates to our API</p>
+              </div>
+
+              <input type="submit" class="submit" onClick="validateForm()">
+            </form>
+          </span>
+
+          <!-- Partners -->
+          <section class="partner-list">
+            <h2>Join the thousands of innovators already building with us</h2>
+            <picture>
+              <img src="./assets/shared/desktop/tesla.svg" alt="tesla">
+              <img src="./assets/shared/desktop/microsoft.svg" alt="microsoft">
+              <img src="./assets/shared/desktop/hewlett-packard.svg" alt="HP">
+              <img src="./assets/shared/desktop/oracle.svg" alt="oracle">
+              <img src="./assets/shared/desktop/google.svg" alt="google">
+              <img src="./assets/shared/desktop/nvidia.svg" alt="nvidia">
+            </picture>
+          </section>
+        </section>
+
+        <section class="ready">
+          <h1>Ready to start? </h1>
+          <span class="details">
+            <input type="email" class="email" placeholder="Enter email address">
+            <button class="schedule">Schedule a Demo</button>
+          </span>
+        </section>
+      </main>
+
+      <!-- Footer -->
+      <footer>
+        <div>
+          <picture class="logo">
+            <img src="./assets/Logo-footer.svg" alt="Logo">
+          </picture>
+          <div class="footer-navbar">
+  
+            <nav class="flex-nav footer">
+              <ul>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </nav>
+            <span>
+              <picture>
+                <img src="./assets/shared/desktop/facebook.svg" alt="facebook" class="social">
+                <img src="./assets/shared/desktop/twitter.svg" alt="twitter" class="social">
+                <img src="./assets/shared/desktop/linkedin.svg" alt="linkedin" class="social">
+              </picture>
+            </span>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
