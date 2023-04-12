@@ -658,6 +658,7 @@ p.missing-field {
 
     .first-page span p {
         text-align: center;
+        margin: 15px 0;
     }
 
     .first-page picture{
