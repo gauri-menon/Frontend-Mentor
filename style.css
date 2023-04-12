@@ -966,7 +966,7 @@ p.missing-field {
         flex-basis: 0 1 100%;
     }
     
-    .ready .details {
+    .ready .details, .details {
         background-color: var(--transparent);
         height: 140px;
         display:block;
