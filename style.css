@@ -49,6 +49,8 @@ h1 {
     width: 555px;
     color: #36536B;
     font-weight: 500;
+    margin:0;
+    margin-top:82px;
 }
 
 h2 {
@@ -65,7 +67,6 @@ h2 {
 
 /* NavBar */
 header{
-    max-width: 1740px;
     display: flex;
     margin: auto;
     justify-content: space-between;
@@ -144,7 +145,9 @@ hr {
 /* index.html */
 /* Main */
 
-.first-page, .first-page-footer> div, .about-implementation> div, .ready, footer> div, .pricing, .plan-list> div {
+/* , .first-page, .first-page-footer> div, .about-implementation> div, .ready, footer> div, .pricing, .plan-list> div  */
+
+.container{
     max-width: 1740px;
     margin: auto;
 }
@@ -168,6 +171,7 @@ hr {
 
 .start{
     font-size: 72px;
+    margin-top: 0;
 }
 
 /* Email box */
@@ -213,6 +217,9 @@ hr {
 .first-page-footer {
     padding: 40px 0;
     background-color: #1b262f;
+    background-image: url("assets/shared/desktop/bg-pattern-circle.svg");
+    background-position: left -230px top -500px;
+    background-repeat: no-repeat;
 }
 
 .first-page-footer h1{
@@ -258,7 +265,8 @@ hr {
 }
 
 .partners picture img {
-    margin: 20px;
+    margin: 20px 40px;
+    margin-right:0;
     width: 110px;
     filter: invert(100%) sepia(25%) saturate(2%) hue-rotate(166deg) brightness(104%) contrast(100%);
 }
@@ -325,12 +333,16 @@ hr {
     justify-content: space-between;
     align-items: center;
     margin-bottom:30px;
+    margin-top: 30px;
 }
 
 .ready span{
     height: 48px;
 }
 
+.ready h1 {
+    margin:0;
+}
 
 /* Footer */
 footer {
@@ -395,16 +407,14 @@ footer div {
 .plan{
     width: 350px;
     flex-shrink:1;
-    margin: 10px;
 }
 
 .pricing h1 {
-    margin:0;
     width: 120px;
 }
 
 .plan hr {
-    width: 90%;
+    width: 100%;
     display: block;
     margin:0;
 }
@@ -423,6 +433,10 @@ footer div {
 .plan span picture p{
     color: #36536B;
     display: inline;
+}
+
+.plan h1 {
+    margin: 0;
 }
 
 .plan button{
@@ -444,6 +458,7 @@ footer div {
 .plan ul {
     list-style-type: none;
     color: #36536B;
+    padding:0;
 }
 
 .plan ul li {
@@ -457,6 +472,10 @@ footer div {
     display: flex;
     justify-content: center;
     margin: 40px 0;
+}
+
+span.heading {
+    margin:0;
 }
 
 .about h1{
@@ -498,7 +517,6 @@ footer div {
 }
 
 .about.team-details {
-    max-width: 1740px;
     justify-content: space-between;
     margin: auto;
     flex: 1 1 350px;
@@ -524,7 +542,6 @@ footer div {
 
 /* contact.html */
 main.contact-page {
-    max-width: 1740px;
     margin:auto;
 }
 
@@ -650,6 +667,10 @@ p.missing-field {
         background-position: center top -450px;
     }
 
+    .container {
+        max-width: 750px;
+    }
+
     /* index.html */
     /* Navbar */
     /* header{
@@ -702,6 +723,10 @@ p.missing-field {
         margin: auto;
     }
 
+    .first-page-footer {
+        background-position: center  top -550px;
+    }
+
     .first-page-footer> div {
         text-align: center;
         justify-content: center;
@@ -745,6 +770,10 @@ p.missing-field {
         flex-direction: column;
         text-align: center;
     }
+
+    .details {
+        margin-top: 40px;
+    }
     
     /* footer {
         padding: 0 40px;
@@ -754,7 +783,8 @@ p.missing-field {
     /* pricing.html */
     .pricing h1 {
         margin: auto;
-        font-size: 32px;
+        font-size: 48px;
+        margin-top: 48px;
     }
 
     .plan h2 {
@@ -771,6 +801,7 @@ p.missing-field {
     }
 
     .plan ul{
+        padding-left: 25%;
         text-align: left;
         /* width: 90%; */
         margin: auto;
@@ -781,10 +812,14 @@ p.missing-field {
         justify-content: center;
     }
 
-    .bg-image {
+    .plan> hr {
+        width:95%;
+    }
+
+    /* .bg-image {
         margin: -450px;
         margin-top: -650px;
-    }
+    } */
 
     /* about.html */
     .about-title {
@@ -811,17 +846,29 @@ p.missing-field {
         text-align: left;
     }
 
+    span.about> p {
+        flex-grow:1;
+        flex-shrink: 1;
+    }
 
 
     /* contact.html */
     main.contact-page section {
         flex-direction: column;
     }
+
+    .contact-page h1 {
+        margin-top: 48px;
+    }
+
+    .partner-list> h2 {
+        text-align: center;
+    }
 }
 
 /* Mobile view */
 
-@media(max-width:640px){
+@media(max-width:670px){
     body {
         background-position: right -500px top -600px;
     }
@@ -829,6 +876,10 @@ p.missing-field {
     /* .bg-image-index {
         margin: -500px -200px;
     } */
+
+    .container {
+        max-width: 450px;
+    }
 
     .menu{
         display: flex;
@@ -848,6 +899,11 @@ p.missing-field {
 
     header {
         align-items: flex-start;
+        margin-top:-8px;
+    }
+
+    .navbar hr {
+        border-color: #979797;
     }
 
     .menu-close {
@@ -858,7 +914,6 @@ p.missing-field {
 
 
     .navbar {
-        
         flex-direction: column;
         justify-content:flex-end;
         background-color: rgba(27,38,47,0.95);
@@ -878,7 +933,8 @@ p.missing-field {
 
     .flex-nav {
         flex:1;
-        flex-grow:1;
+        max-height: 160px;
+        /* flex-grow:1; */
     }
     
     .flex-nav ul{
@@ -890,15 +946,18 @@ p.missing-field {
     }
     
     .flex-nav ul li {
-        flex-grow:1;
+        /* flex-grow:1; */
+        margin: 16px;
     }
 
     .flex-nav ul li a:link{
         color:#6C8294;
+        /* color: #FBFCFE; */
     }
 
     .flex-nav ul li a:visited{
         color:#6C8294;
+        /* color: #FBFCFE; */
     }
 
 
@@ -925,43 +984,33 @@ p.missing-field {
     }
 
     .first-page picture img{
-        height: 400px;
+        height: 240px;
         width: auto;
     }
 
-    .details {
-        background-color: rgba(251,252,254,0);
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .details .schedule, .details .email {
-        height: 48px;
-        width: 327px;
-        margin-top: 15px;
-    }
-
+    
     .partners> picture {
         /* width: 280px; */
         /* margin: auto; */
     }
-
+    
     .partners picture img {
         width: 100px;
+        margin:20px;
     }
 
-    .info {
-        /* width: 327px;    */
-    }
-
+    /* .info {
+        width: 327px;   
+    } */
+    
     /* Mid page footer */
-
-
+    
+    
     /* After first footer */
     .implement div span {
         width: 322px;
     }
-
+    
     .implement div picture img {
         width: 320px;
     }
@@ -971,20 +1020,36 @@ p.missing-field {
         flex-direction: column;
         align-items: center;
     }
-
-    /* Ready to start */
-
+    
+    /* Ready to start */   
+    .details> .schedule, .details> .email {
+        height: 48px;
+        width: 327px;
+        margin:auto;
+        margin-top: 15px;
+        flex-basis: 0 1 100%;
+    }
+    
     .ready .details {
+        background-color: rgba(251,252,254,0);
         height: 140px;
         display:block;
         width: 370px;
+        margin-top: 32px;
     }
     
     section.ready h1 {
-        width: 200px;
+        width: 320px;
+        font-size: 32px;
     }
 
     /* Page footer */
+    footer{
+        background-image: url("assets/shared/desktop/bg-pattern-circle.svg");
+        background-repeat: no-repeat;
+        background-position: center top 150px;
+    }
+
     footer div{
         flex-direction: column;
         height: 353px;
@@ -1007,9 +1072,12 @@ p.missing-field {
     }
 
     .plan {
-
         width:90%;
         margin: auto;
+    }
+
+    .plan ul {
+        /* padding-left:30%; */
     }
 
     .plan hr{
