@@ -713,6 +713,10 @@ p.missing-field {
         margin-top: 60px;
     }
 
+    .middle {
+        margin: 0 10px;
+    }
+
     /* Ready to start section */
     .ready {
         flex-direction: column;
@@ -955,6 +959,10 @@ p.missing-field {
     .finances {
         flex-direction: column;
         align-items: center;
+    }
+
+    .middle {
+        margin:0;
     }
     
     /* Ready to start */   
